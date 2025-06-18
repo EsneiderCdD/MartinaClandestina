@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Josefin+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+
+:root {
+  /* 🎨 Colores */
+  --color-primary: #0066ff;
+  --color-secondary: #ffcc00;
+  --color-background: #283926;
+  --color-text: #333;
+  --color-logo: #F9D0A2;
+
+  /* 🔤 Tipografías */
+  --font-title: 'Playfair Display', serif;
+  --font-category: 'Josefin Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  /* 📱 Breakpoints */
+  --breakpoint-xs: 370px;
+  --breakpoint-sm: 475px;
+  --breakpoint-xmd: 575px;
+  --breakpoint-md: 675px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}

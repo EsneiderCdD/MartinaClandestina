@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { menus } from "../data/menus";
-import DayMenu from '../components/DayMenu';
+import DayMenu from '../components/DayMenu/DayMenu';
 
 const MenuPage = () => {
     const { dia } = useParams()
