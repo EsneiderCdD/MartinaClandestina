@@ -1,4 +1,5 @@
 import { generarMensaje } from '../../utils/generateOrderMessage'
+import styles from './OrderSummary.module.css'
 
 const OrderSummary = ({ seleccion, dia }) => {
   const mensaje = generarMensaje(seleccion, dia)
@@ -6,13 +7,14 @@ const OrderSummary = ({ seleccion, dia }) => {
   const pedidoIncompleto = Object.values(seleccion).some(valor => !valor)
 
   if (Object.keys(seleccion).length === 0) {
-    return <p>Aún no has seleccionado nada.</p>
+    return <p className={styles.alerta}>Aún no has seleccionado nada.</p>
   }
 
   return (
-    <div>
-      <h3>Resumen del Pedido</h3>
-      <ul>
+    <div className={styles.contenedor}>
+      <h3 className={styles.titulo}>Resumen del Pedido</h3>
+
+      <ul className={styles.lista}>
         {Object.entries(seleccion).map(([categoria, opcion]) => (
           <li key={categoria}>
             {categoria}: {opcion}
@@ -25,20 +27,12 @@ const OrderSummary = ({ seleccion, dia }) => {
           href={mensaje}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            display: 'inline-block',
-            marginTop: '1rem',
-            padding: '0.5rem 1rem',
-            backgroundColor: 'green',
-            color: 'white',
-            textDecoration: 'none',
-            borderRadius: '4px'
-          }}
+          className={styles.enlace}
         >
           Enviar pedido por WhatsApp
         </a>
       ) : (
-        <p style={{ color: 'red' }}>Selecciona todas las opciones para continuar.</p>
+        <p className={styles.alerta}>Selecciona todas las opciones para continuar.</p>
       )}
     </div>
   )

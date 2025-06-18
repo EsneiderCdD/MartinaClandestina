@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import DishSelector from '../DishSelector/DishSelector'
 import OrderSummary from '../OrderSummary/OrderSummary'
+import styles from './DayMenu.module.css'
 
 const DayMenu = ({ dia, menu }) => {
   const [seleccion, setSeleccion] = useState({})
@@ -13,29 +14,25 @@ const DayMenu = ({ dia, menu }) => {
   }
 
   return (
-    <div>
-      <h2>Menú del {dia}</h2>
+    <div className={styles.contenedor}>
+      <h2 className={styles.titulo}>Menú del {dia}</h2>
 
       {Object.entries(menu).map(([categoria, opciones]) => (
-        <DishSelector
-          key={categoria}
-          categoria={categoria}
-          opciones={opciones}
-          seleccionActual={seleccion[categoria]}
-          onSeleccionar={(opcion) => manejarSeleccion(categoria, opcion)}
-        />
+        <div key={categoria} className={styles.bloque}>
+          <div className={styles.categoria}>
+            <h3 className={styles.categoriaTitulo}>{categoria}</h3>
+          </div>
+
+          <DishSelector
+            categoria={categoria}
+            opciones={opciones}
+            seleccionActual={seleccion[categoria]}
+            onSeleccionar={(opcion) => manejarSeleccion(categoria, opcion)}
+          />
+        </div>
       ))}
 
-      <hr />
-
       <OrderSummary seleccion={seleccion} dia={dia} />
-      {/* <ul>
-        {Object.entries(seleccion).map(([categoria, opcion]) => (
-          <li key={categoria}>
-            {categoria}: {opcion}
-          </li>
-        ))}
-      </ul> */}
     </div>
   )
 }
