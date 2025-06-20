@@ -3,7 +3,9 @@ import styles from './DishSelector.module.css'
 const DishSelector = ({ categoria, opciones, seleccionActual, onSeleccionar }) => {
   return (
     <div className={styles.contenedor}>
-      <h3 className={styles.titulo}>{categoria.toUpperCase()}</h3>
+      <div className={styles.categoria}>
+        <h3 className={styles.titulo}>{categoria.toUpperCase()}</h3>
+      </div>
       <ul className={styles.lista}>
         {opciones.map((opcion, index) => (
           <li key={index}>

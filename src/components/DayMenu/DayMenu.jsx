@@ -19,12 +19,12 @@ const DayMenu = ({ dia, menu }) => {
 
       {Object.entries(menu).map(([categoria, opciones]) => (
         <div key={categoria} className={styles.bloque}>
-          <div className={styles.categoria}>
+          {/* <div className={styles.categoria}>
             <h3 className={styles.categoriaTitulo}>{categoria}</h3>
-          </div>
+          </div> */}
 
           <DishSelector
-            categoria={categoria}
+            categoria={categoria} 
             opciones={opciones}
             seleccionActual={seleccion[categoria]}
             onSeleccionar={(opcion) => manejarSeleccion(categoria, opcion)}

@@ -6,8 +6,8 @@
   --color-primary: #0066ff;
   --color-secondary: #ffcc00;
   --color-background: #283926;
-  --color-text: #333;
-  --color-logo: #F9D0A2;
+  --color-text: #ffffff;
+  --color-logo: #F2CDA0;
 
   /* 🔤 Tipografías */
   --font-title: 'Playfair Display', serif;
@@ -25,5 +25,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  /* border: red dotted 1px; */
 }
+  

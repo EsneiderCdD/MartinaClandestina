@@ -1,7 +1,7 @@
 .contenedor {
   margin-top: 2rem;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: 8px;
   max-width: 480px;
   margin-left: auto;
