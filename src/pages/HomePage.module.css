@@ -6,13 +6,6 @@
   min-height: 100vh;
 }
 
-.titulo {
-  font-family: var(--font-title);
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
 .lista {
   display: flex;
@@ -22,7 +15,7 @@
 
 .enlace {
   display: block;
-  background-color: white;
+  background-color: rgb(236, 230, 230);
   text-align: center;
   padding: 1rem;
   border-radius: 8px;
@@ -37,4 +30,11 @@
 
 .enlace:hover {
   background-color: #f0f0f0;
+}
+
+.logo {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 1rem;
 }
