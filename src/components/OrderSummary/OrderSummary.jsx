@@ -1,38 +1,41 @@
+// src/components/OrderSummary/OrderSummary.jsx
+
 import { generarMensaje } from '../../utils/generateOrderMessage'
 import styles from './OrderSummary.module.css'
 
-const OrderSummary = ({ seleccion, dia }) => {
-  const mensaje = generarMensaje(seleccion, dia)
+const OrderSummary = ({ selecciones, dia }) => {
+  const mensaje = generarMensaje(selecciones, dia)
 
-  const pedidoIncompleto = Object.values(seleccion).some(valor => !valor)
-
-  if (Object.keys(seleccion).length === 0) {
-    return <p className={styles.alerta}>Aún no has seleccionado nada.</p>
-  }
+  const pedidosIncompletos = selecciones.some(seleccion =>
+    Object.values(seleccion).some(valor => !valor)
+  )
 
   return (
     <div className={styles.contenedor}>
       <h3 className={styles.titulo}>Resumen del Pedido</h3>
 
-      <ul className={styles.lista}>
-        {Object.entries(seleccion).map(([categoria, opcion]) => (
-          <li key={categoria}>
-            {categoria}: {opcion}
-          </li>
-        ))}
-      </ul>
+      {selecciones.map((seleccion, index) => (
+        <div key={index} className={styles.pedido}>
+          <h4 className={styles.subtitulo}>Pedido {index + 1}</h4>
+          <ul className={styles.lista}>
+            {Object.entries(seleccion).map(([categoria, opcion]) => (
+              <li key={categoria}>{categoria}: {opcion}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
-      {!pedidoIncompleto ? (
+      {!pedidosIncompletos ? (
         <a
           href={mensaje}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.enlace}
         >
-          Enviar pedido por WhatsApp
+          Enviar pedidos por WhatsApp
         </a>
       ) : (
-        <p className={styles.alerta}>Selecciona todas las opciones para continuar.</p>
+        <p className={styles.alerta}>Selecciona todas las opciones para todos los pedidos.</p>
       )}
     </div>
   )

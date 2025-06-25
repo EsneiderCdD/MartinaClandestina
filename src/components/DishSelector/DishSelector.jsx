@@ -1,3 +1,5 @@
+// src/components/DishSelector/DishSelector.jsx
+
 import styles from './DishSelector.module.css'
 
 const DishSelector = ({ categoria, opciones, seleccionActual, onSeleccionar }) => {
@@ -10,9 +12,7 @@ const DishSelector = ({ categoria, opciones, seleccionActual, onSeleccionar }) =
         {opciones.map((opcion, index) => (
           <li key={index}>
             <button
-              className={`${styles.boton} ${
-                seleccionActual === opcion ? styles.botonSeleccionado : ''
-              }`}
+              className={`${styles.boton} ${seleccionActual === opcion ? styles.botonSeleccionado : ''}`}
               onClick={() => onSeleccionar(opcion)}
             >
               {opcion}
