@@ -38,3 +38,9 @@
   height: auto;
   margin: 0 auto 1rem;
 }
+.mc {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 1rem;
+}

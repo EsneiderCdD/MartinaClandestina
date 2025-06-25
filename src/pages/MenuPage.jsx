@@ -17,7 +17,6 @@ const MenuPage = () => {
 
   return (
     <div>
-      <h1>Menú para {dia}</h1>
       <DayMenu dia={dia} menu={menu} />
     </div>
   )
