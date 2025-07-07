@@ -2,7 +2,7 @@ import AnimatedLink from '../router/AnimatedLink'
 import styles from './HomePage.module.css'
 import Logo from '../assets/images/logo.png'
 import MC from '../assets/images/MC.png'
-import { style } from 'framer-motion/client'
+
 
 const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
 
