@@ -59,7 +59,7 @@ const DayMenu = ({ dia, menu }) => {
 
       {/* Formulario del pedido activo */}
       <div className={styles.bloque}>
-        <h3 className={styles.subtitulo}>Pedido {pedidoActivo + 1}</h3>
+       
 
         {Object.entries(menu).map(([categoria, opciones]) => (
           <DishSelector

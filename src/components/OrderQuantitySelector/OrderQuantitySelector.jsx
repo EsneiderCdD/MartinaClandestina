@@ -11,7 +11,7 @@ const OrderQuantitySelector = ({ cantidad, setCantidad }) => {
   return (
     <div className={styles.selector}>
       <button onClick={disminuir} className={styles.boton}>-</button>
-      <span className={styles.cantidad}>Pedidos: {cantidad}</span>
+      <span className={styles.cantidad}>Pedido(s): {cantidad}</span>
       <button onClick={aumentar} className={styles.boton}>+</button>
     </div>
   )

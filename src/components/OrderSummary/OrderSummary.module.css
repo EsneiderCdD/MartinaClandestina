@@ -10,12 +10,22 @@
 
 .titulo {
   font-family: var(--font-category);
+
   font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-text);
+  color: var(--color-primary);
+}
+.subtitulo {
+  font-family: var(--font-category);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
 .lista {
@@ -23,7 +33,7 @@
   padding: 0;
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
