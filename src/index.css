@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap');
 :root {
   /* 🎨 Colores */
-  --color-primary: #0066ff;
+  --color-primary: #ffffff;
   --color-secondary: #ffcc00;
   --color-background: #283926;
   --color-text: #283926;
@@ -9,7 +9,7 @@
 
   /* 🔤 Tipografías */
   --font-title: 'Shadows Into Light';
-  --font-category: 'Josefin Sans', sans-serif;
+  --font-category: 'Open Sans';
   --font-body: 'Inter', sans-serif;
   /* 📱 Breakpoints */
   --breakpoint-xs: 370px;
@@ -23,6 +23,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: red dotted 1px; */
+  border: red dotted 1px;
 }
   
