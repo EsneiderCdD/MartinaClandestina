@@ -10,6 +10,9 @@ const HomePage = () => (
     <img src={Logo} alt="Logo" className={styles.logo} />
     <img src={MC} className={styles.mc} />
     <div className={styles.lista}>
+      <AnimatedLink to="/more" className={styles.enlace}>
+        Conocer Más
+      </AnimatedLink>
       {dias.map((dia) => (
         <AnimatedLink key={dia} to={`/menu/${dia}`} className={styles.enlace}>
           Menú de {dia.charAt(0).toUpperCase() + dia.slice(1)}
@@ -18,9 +21,7 @@ const HomePage = () => (
       <AnimatedLink to="/about" className={styles.enlace}>
         Sobre Nosotros
       </AnimatedLink>
-      <AnimatedLink to="/more" className={styles.enlace}>
-        Conocer Más
-      </AnimatedLink>
+
     </div>
   </div>
 )
