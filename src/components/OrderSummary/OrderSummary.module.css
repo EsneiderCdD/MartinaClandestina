@@ -9,30 +9,29 @@
 }
 
 .titulo {
-  font-family: var(--font-category);
-
+  font-family: var(--font-title);
   font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-primary);
+  color: var(--color-logo);
 }
 .subtitulo {
-  font-family: var(--font-category);
+  font-family: var(--font-title);
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-primary);
+  color: var(--color-logo);
 }
 
 .lista {
   list-style: none;
   padding: 0;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-family: var(--font-category);
+  font-size: 0.9rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
