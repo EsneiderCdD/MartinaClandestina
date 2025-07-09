@@ -28,13 +28,19 @@
 }
 
 .pedidosSelector {
+  
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  max-width: 480px;
+  gap: 5px;
   margin: 20px 0;
 }
 
 .pedidoBoton {
   font-family: var(--font-category);
+  font-weight: bold;
   font-size: 0.75rem;
   padding: 8px 16px;
   border: 1px solid #000;

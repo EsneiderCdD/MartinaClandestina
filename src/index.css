@@ -10,7 +10,7 @@
   /* 🔤 Tipografías */
   --font-title: 'Shadows Into Light';
   --font-category: 'Open Sans';
-  --font-body: 'Inter', sans-serif;
+
   /* 📱 Breakpoints */
   --breakpoint-xs: 370px;
   --breakpoint-sm: 475px;
@@ -23,6 +23,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: red dotted 1px; */
+  border: red dotted 1px;
 }
   
