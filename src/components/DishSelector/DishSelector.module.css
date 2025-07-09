@@ -4,11 +4,14 @@
 }
 
 .categoria {
-  background-color: #ffffffde;
+  background-color: #f0f0f0c2 ;
   padding: 0.5rem;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 0.5rem;
+  width: 350px;
+  
+  margin: 0 auto;
 }
 
 .titulo {
@@ -19,6 +22,7 @@
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
+  
 }
 
 .lista {
@@ -33,6 +37,7 @@
 }
 
 .boton {
+  
   font-family: var(--font-category);
   
   border: none;
@@ -43,6 +48,7 @@
   transition: all 0.2s ease;
   color: var(--color-primary);
   font-size: 1rem;
+  margin-top: 0.5rem;
   
   letter-spacing: 2px;
 

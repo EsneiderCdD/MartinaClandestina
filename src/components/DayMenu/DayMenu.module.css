@@ -18,14 +18,14 @@
   margin-bottom: 1.5rem;
 }
 
+
 .categoria {
-  background-color: #ffffff;
-  padding: 0.75rem;
+  background-color: #ffffffde;
+  padding: 0.5rem;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 0.5rem;
 }
-
 
 .pedidosSelector {
   display: flex;
