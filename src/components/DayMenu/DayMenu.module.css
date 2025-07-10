@@ -14,16 +14,24 @@
   color: var(--color-logo);
 }
 
+.imagen {
+  display: flex;
+  width: 250px;
+  height: auto;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+}
+
 .bloque {
   margin-bottom: 1.5rem;
 }
+
 .logo {
   display: flex;
   width: 150px;
   height: auto;
   margin: 0 auto 1rem;
 }
-
 
 .categoria {
   background-color: #ffffffde;
@@ -34,11 +42,9 @@
 }
 
 .pedidosSelector {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
   max-width: 480px;
   gap: 5px;
   margin: 20px 0;
@@ -58,4 +64,23 @@
 .pedidoBoton.activo {
   background-color: var(--color-logo);
   color: #fff;
+}
+
+/* 🎯 NUEVOS ESTILOS AÑADIDOS */
+
+.subtitulo {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  color: var(--color-logo);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.bloque p {
+  font-family: var(--font-category);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+  margin-bottom: 1.5rem;
 }
