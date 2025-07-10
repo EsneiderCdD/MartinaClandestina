@@ -1,16 +1,16 @@
-
 import { useState } from 'react'
 import DishSelector from '../DishSelector/DishSelector'
 import OrderSummary from '../OrderSummary/OrderSummary'
 import OrderQuantitySelector from '../OrderQuantitySelector/OrderQuantitySelector'
 import styles from './DayMenu.module.css'
 import MyC from '../../assets/images/MyC.png'
-
+import { useTransition } from '../../transition/TransitionContext' // <- NUEVO
 
 const DayMenu = ({ dia, menu }) => {
   const [cantidadPedidos, setCantidadPedidos] = useState(1)
   const [selecciones, setSelecciones] = useState([{}])
   const [pedidoActivo, setPedidoActivo] = useState(0)
+  const { setTargetPath } = useTransition() // <- NUEVO
 
   const manejarSeleccion = (categoria, opcion) => {
     setSelecciones((prev) => {
@@ -35,17 +35,20 @@ const DayMenu = ({ dia, menu }) => {
       }
     })
     if (pedidoActivo >= nuevaCantidad) {
-      setPedidoActivo(nuevaCantidad - 1) // Mantener un pedido activo válido
+      setPedidoActivo(nuevaCantidad - 1)
     }
   }
 
   return (
     <div className={styles.contenedor}>
-      
-
       <img src={MyC} alt="Logo" className={styles.logo} />
-      <h2 className={styles.titulo}>Menú del {dia}</h2>
+      
+      {/* Botón Atrás */}
+      <button className={styles.botonAtras} onClick={() => setTargetPath('/')}>
+        ← 
+      </button>
 
+      <h2 className={styles.titulo}>Menú del {dia}</h2>
 
       <OrderQuantitySelector cantidad={cantidadPedidos} setCantidad={manejarCantidad} />
 
@@ -64,8 +67,6 @@ const DayMenu = ({ dia, menu }) => {
 
       {/* Formulario del pedido activo */}
       <div className={styles.bloque}>
-       
-
         {Object.entries(menu).map(([categoria, opciones]) => (
           <DishSelector
             key={categoria}
