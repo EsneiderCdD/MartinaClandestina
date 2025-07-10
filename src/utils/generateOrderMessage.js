@@ -11,5 +11,5 @@ export function generarMensaje(selecciones, dia) {
     mensaje += '\n'
   })
 
-  return `https://wa.me/xxxxxxxxxxx?text=${encodeURIComponent(mensaje)}`
+  return `https://wa.me/3336494594?text=${encodeURIComponent(mensaje)}`
 }
