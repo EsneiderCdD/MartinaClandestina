@@ -1,8 +1,9 @@
 import styles from '../components/DayMenu/DayMenu.module.css'
-
+import MyC from '../assets/images/MyC.png';
 const AboutPage = () => {
   return (
     <div className={styles.contenedor}>
+      <img src={MyC} alt="Logo" className={styles.logo} />
       <h2 className={styles.titulo}>Sobre Nosotros</h2>
 
       <div className={styles.bloque}>

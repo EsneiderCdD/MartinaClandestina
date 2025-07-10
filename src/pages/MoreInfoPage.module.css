@@ -5,6 +5,12 @@
   background-color: var(--color-background);
   min-height: 100vh;
 }
+.logo {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
 
 .titulo {
   font-family: var(--font-title);

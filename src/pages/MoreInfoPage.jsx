@@ -7,9 +7,11 @@ import MC6 from '../assets/images/MC6.webp';
 import MC7 from '../assets/images/MC7.webp';
 import MC8 from '../assets/images/MC8.webp';
 import MC9 from '../assets/images/MC9.webp';
+import MyC from '../assets/images/MyC.png';
 const MoreInfoPage = () => {
   return (
     <div className={styles.contenedor}>
+      <img src={MyC} alt="Logo" className={styles.logo} />
       <h2 className={styles.titulo}>Conocer Más</h2>
 
       <div className={styles.bloque}>

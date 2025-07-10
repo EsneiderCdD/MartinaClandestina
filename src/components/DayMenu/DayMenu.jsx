@@ -1,10 +1,11 @@
-// src/components/DayMenu/DayMenu.jsx
 
 import { useState } from 'react'
 import DishSelector from '../DishSelector/DishSelector'
 import OrderSummary from '../OrderSummary/OrderSummary'
 import OrderQuantitySelector from '../OrderQuantitySelector/OrderQuantitySelector'
 import styles from './DayMenu.module.css'
+import MyC from '../../assets/images/MyC.png'
+
 
 const DayMenu = ({ dia, menu }) => {
   const [cantidadPedidos, setCantidadPedidos] = useState(1)
@@ -40,7 +41,11 @@ const DayMenu = ({ dia, menu }) => {
 
   return (
     <div className={styles.contenedor}>
+      
+
+      <img src={MyC} alt="Logo" className={styles.logo} />
       <h2 className={styles.titulo}>Menú del {dia}</h2>
+
 
       <OrderQuantitySelector cantidad={cantidadPedidos} setCantidad={manejarCantidad} />
 

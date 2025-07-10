@@ -17,6 +17,12 @@
 .bloque {
   margin-bottom: 1.5rem;
 }
+.logo {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
 
 
 .categoria {
