@@ -98,4 +98,7 @@
   cursor: pointer;
 
 }
-
+.botonAtras:hover {
+  background-color: #fff;
+  color: var(--color-logo);
+}
