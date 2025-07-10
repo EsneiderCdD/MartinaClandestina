@@ -46,3 +46,9 @@
   margin-bottom: 2rem;
 
 }
+.activo {
+  background-color: #fff;
+  color: var(--color-logo);
+  border: 2px solid var(--color-logo);
+  transition: background-color 0.3s, color 0.3s;
+}
