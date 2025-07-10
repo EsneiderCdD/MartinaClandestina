@@ -1,6 +1,6 @@
 import AnimatedLink from '../router/AnimatedLink'
 import styles from './HomePage.module.css'
-import Logo from '../assets/images/logo.png'
+import Logo from '../assets/images/Logo.png'
 import MC from '../assets/images/MC.png'
 
 const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
