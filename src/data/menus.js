@@ -32,8 +32,9 @@ export const menus = {
     Bebidas: ['Limonada natural', 'Guayaba']
   },
   viernes: {
-    Proteina: ['Pescado', 'Carne'],
-    BarPropase: ['Arroz con coco', 'Yuca'],
-    entrada: ['Fruta', 'Ensalada']
+    ESPECIAL: ['Arroz montañero (pollo, cerdo, chorizo, chicharrón, cebollín, maíz, maduritos) acompañado de patacón y guacamole. '],
+    MENÚ: ['Sopa de frijoles, cerdo a la finas hierbas, arroz blanco, patacón y ensalada (mix de lechugas, tomate, cebolla, pepino y vinagreta artesanal)'],
+    Bebidas: ['Limonada natural']
+   
   }
 }
