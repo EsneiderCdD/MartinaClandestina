@@ -29,7 +29,7 @@ const HomePage = () => {
         ))}
 
         <AnimatedLink to="/about" className={styles.enlace}>
-          Sobre Nosotros
+          Sobre Nosotras
         </AnimatedLink>
       </div>
     </div>
