@@ -4,6 +4,7 @@
   padding: 2rem 1rem;
   background-color: var(--color-background);
   min-height: 100vh;
+
 }
 
 
@@ -51,4 +52,52 @@
   color: var(--color-logo);
   border: 2px solid var(--color-logo);
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🔽 Responsive: Ajustes progresivos */
+
+@media (max-width: 675px) {
+  .enlace {
+    width: 100%;
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .enlace {
+    font-size: 1.15rem;
+    padding: 0.6rem;
+    letter-spacing: 4px;
+  }
+
+  .logo,
+  .mc {
+    width: 130px;
+  }
+}
+
+@media (max-width: 475px) {
+  .enlace {
+    font-size: 1.05rem;
+    letter-spacing: 3px;
+  }
+
+  .logo,
+  .mc {
+    width: 110px;
+  }
+}
+
+@media (max-width: 370px) {
+  .enlace {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    padding: 0.4rem;
+  }
+
+  .logo,
+  .mc {
+    width: 100px;
+  }
 }

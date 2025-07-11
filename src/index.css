@@ -6,6 +6,7 @@
   --color-background: #283926;
   --color-text: #283926;
   --color-logo: #F2CDA0;
+  --color-primary: #F7F4ED;
 
   /* 🔤 Tipografías */
   --font-title: 'Shadows Into Light';
@@ -24,5 +25,6 @@
   padding: 0;
   box-sizing: border-box;
   border: red dotted 1px;
+  
 }
   

@@ -54,3 +54,69 @@
   background-color: #fff;
   color: var(--color-logo);
 }
+
+
+
+@media (max-width: 575px) {
+  .titulo {
+    font-size: 1.85rem;
+  }
+  
+
+
+
+  .logo
+   {
+    width: 130px;
+  }
+  .bloque img {
+    width: 200px;
+    height: 200px;
+  }
+  .botonAtras {
+    top:100px;
+    font-size: 0.85rem;
+}
+}
+
+@media (max-width: 475px) {
+  .titulo {
+    font-size: 1.75rem;
+  }
+
+
+  .logo
+   {
+    width: 110px;
+  }
+
+  .bloque img {
+    width: 150px;
+    height: 150px;
+  }
+  .botonAtras {
+    top:90px;
+    font-size: 0.75rem;
+}
+}
+
+@media (max-width: 370px) {
+  .titulo {
+    font-size: 1.55rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .bloque img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .botonAtras {
+    top: 85px;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
