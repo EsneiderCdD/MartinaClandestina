@@ -9,8 +9,7 @@
   border-radius: 8px;
   text-align: center;
   margin-bottom: 0.5rem;
-  width: 400px;
-  
+  width: 400px; 
   margin: 0 auto;
 }
 
@@ -60,4 +59,80 @@
   color: var(--color-logo);
   font-weight: bold;
   
+}
+
+@media (max-width: 575px) {
+  .contenedor {
+    padding: 0 0.75rem;
+  }
+
+  .categoria {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .titulo {
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+  }
+
+  .lista {
+    gap: 0.45rem;
+  }
+
+  .boton {
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .contenedor {
+    padding: 0 0.5rem;
+  }
+
+  .categoria {
+    padding: 0.45rem;
+  }
+
+  .titulo {
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+  }
+
+  .lista {
+    gap: 0.4rem;
+  }
+
+  .boton {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.35rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .contenedor {
+    padding: 0 0.25rem;
+  }
+
+  .categoria {
+    padding: 0.4rem;
+  }
+
+  .titulo {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .lista {
+    gap: 0.35rem;
+  }
+
+  .boton {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 0.3rem;
+  }
 }
