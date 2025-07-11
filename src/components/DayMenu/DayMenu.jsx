@@ -4,13 +4,13 @@ import OrderSummary from '../OrderSummary/OrderSummary'
 import OrderQuantitySelector from '../OrderQuantitySelector/OrderQuantitySelector'
 import styles from './DayMenu.module.css'
 import MyC from '../../assets/images/MyC.png'
-import { useTransition } from '../../transition/TransitionContext' // <- NUEVO
+import { useTransition } from '../../transition/TransitionContext'
 
 const DayMenu = ({ dia, menu }) => {
   const [cantidadPedidos, setCantidadPedidos] = useState(1)
   const [selecciones, setSelecciones] = useState([{}])
   const [pedidoActivo, setPedidoActivo] = useState(0)
-  const { setTargetPath } = useTransition() // <- NUEVO
+  const { setTargetPath } = useTransition()
 
   const manejarSeleccion = (categoria, opcion) => {
     setSelecciones((prev) => {
@@ -39,20 +39,20 @@ const DayMenu = ({ dia, menu }) => {
     }
   }
 
+  const esViernes = dia.toLowerCase() === 'viernes'
+
   return (
     <div className={styles.contenedor}>
       <img src={MyC} alt="Logo" className={styles.logo} />
-      
-      {/* Botón Atrás */}
+
       <button className={styles.botonAtras} onClick={() => setTargetPath('/')}>
-        ← 
+        ←
       </button>
 
       <h2 className={styles.titulo}>Menú del {dia}</h2>
 
       <OrderQuantitySelector cantidad={cantidadPedidos} setCantidad={manejarCantidad} />
 
-      {/* Selector de pedidos */}
       <div className={styles.pedidosSelector}>
         {Array.from({ length: cantidadPedidos }).map((_, index) => (
           <button
@@ -65,17 +65,36 @@ const DayMenu = ({ dia, menu }) => {
         ))}
       </div>
 
-      {/* Formulario del pedido activo */}
       <div className={styles.bloque}>
-        {Object.entries(menu).map(([categoria, opciones]) => (
-          <DishSelector
-            key={categoria}
-            categoria={categoria}
-            opciones={opciones}
-            seleccionActual={selecciones[pedidoActivo]?.[categoria]}
-            onSeleccionar={(opcion) => manejarSeleccion(categoria, opcion)}
-          />
-        ))}
+        {esViernes ? (
+          <>
+            <DishSelector
+              categoria="Opción Principal"
+              opciones={[
+                ...menu.MENÚ.map((op) => `MENÚ: ${op}`),
+                ...menu.ESPECIAL.map((op) => `ESPECIAL: ${op}`)
+              ]}
+              seleccionActual={selecciones[pedidoActivo]?.['Opción Principal']}
+              onSeleccionar={(opcion) => manejarSeleccion('Opción Principal', opcion)}
+            />
+            <DishSelector
+              categoria="Bebidas"
+              opciones={menu.Bebidas}
+              seleccionActual={selecciones[pedidoActivo]?.['Bebidas']}
+              onSeleccionar={(opcion) => manejarSeleccion('Bebidas', opcion)}
+            />
+          </>
+        ) : (
+          Object.entries(menu).map(([categoria, opciones]) => (
+            <DishSelector
+              key={categoria}
+              categoria={categoria}
+              opciones={opciones}
+              seleccionActual={selecciones[pedidoActivo]?.[categoria]}
+              onSeleccionar={(opcion) => manejarSeleccion(categoria, opcion)}
+            />
+          ))
+        )}
       </div>
 
       <OrderSummary selecciones={selecciones} dia={dia} />
@@ -84,4 +103,3 @@ const DayMenu = ({ dia, menu }) => {
 }
 
 export default DayMenu
-
