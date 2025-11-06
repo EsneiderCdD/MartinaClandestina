@@ -69,13 +69,13 @@ const DayMenu = ({ dia, menu }) => {
         {esViernes ? (
           <>
             <DishSelector
-              categoria="Opción Principal"
+              categoria="Opción"
               opciones={[
                 ...menu.MENÚ.map((op) => `MENÚ: ${op}`),
                 ...menu.ESPECIAL.map((op) => `ESPECIAL: ${op}`)
               ]}
-              seleccionActual={selecciones[pedidoActivo]?.['Opción Principal']}
-              onSeleccionar={(opcion) => manejarSeleccion('Opción Principal', opcion)}
+              seleccionActual={selecciones[pedidoActivo]?.['Opción ']}
+              onSeleccionar={(opcion) => manejarSeleccion('Opción ', opcion)}
             />
             <DishSelector
               categoria="Bebidas"

@@ -8,7 +8,7 @@ export function generarMensaje(selecciones, dia) {
     mensaje += `Pedido ${index + 1}:\n`
 
     Object.entries(seleccion).forEach(([categoria, opcion]) => {
-      if (esViernes && categoria === 'Opción Principal') {
+      if (esViernes && categoria === 'Opción') {
         // Eliminar prefijo "MENÚ: " o "ESPECIAL: " del texto final
         if (opcion.startsWith('MENÚ: ')) {
           mensaje += `- MENÚ: ${opcion.replace('MENÚ: ', '')}\n`
