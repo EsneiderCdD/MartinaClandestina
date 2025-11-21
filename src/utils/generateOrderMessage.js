@@ -22,5 +22,6 @@ export function generarMensaje(selecciones, dia) {
     mensaje += '\n'
   })
 
-  return `https://wa.me/3336494594?text=${encodeURIComponent(mensaje)}`
+  // Número de WhatsApp desactivado para pruebas; reemplazar por el real
+  return `https://wa.me/0000000000?text=${encodeURIComponent(mensaje)}`
 }
