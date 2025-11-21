@@ -54,7 +54,6 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* 🔽 Responsive: Ajustes progresivos */
 
 @media (max-width: 675px) {
   .enlace {

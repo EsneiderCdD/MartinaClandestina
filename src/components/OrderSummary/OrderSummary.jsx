@@ -1,5 +1,3 @@
-// src/components/OrderSummary/OrderSummary.jsx
-
 import { generarMensaje } from '../../utils/generateOrderMessage'
 import styles from './OrderSummary.module.css'
 

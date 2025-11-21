@@ -1,5 +1,3 @@
-// src/utils/generateOrderMessage.js
-
 export function generarMensaje(selecciones, dia) {
   let mensaje = `Hola, quiero realizar los siguientes pedidos para el ${dia}:\n\n`
   const esViernes = dia.toLowerCase() === 'viernes'
@@ -9,7 +7,6 @@ export function generarMensaje(selecciones, dia) {
 
     Object.entries(seleccion).forEach(([categoria, opcion]) => {
       if (esViernes && categoria === 'Opción') {
-        // Eliminar prefijo "MENÚ: " o "ESPECIAL: " del texto final
         if (opcion.startsWith('MENÚ: ')) {
           mensaje += `- MENÚ: ${opcion.replace('MENÚ: ', '')}\n`
         } else if (opcion.startsWith('ESPECIAL: ')) {

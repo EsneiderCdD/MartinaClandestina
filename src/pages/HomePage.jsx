@@ -6,8 +6,8 @@ import MC from '../assets/images/MC.png'
 const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
 
 const HomePage = () => {
-  const hoy = new Date().getDay() // 1 = lunes, ..., 5 = viernes
-  const indiceHoy = hoy >= 1 && hoy <= 5 ? hoy - 1 : null // lunes = 0, ..., viernes = 4
+  const hoy = new Date().getDay()
+  const indiceHoy = hoy >= 1 && hoy <= 5 ? hoy - 1 : null
 
   return (
     <div className={styles.contenedor}>

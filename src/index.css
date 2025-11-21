@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap');
 :root {
-  /* 🎨 Colores */
   --color-primary: #ffffff;
   --color-secondary: #ffcc00;
   --color-background: #283926;
   --color-text: #283926;
   --color-logo: #F2CDA0;
   --color-primary: #F7F4ED;
-
-  /* 🔤 Tipografías */
   --font-title: 'Shadows Into Light';
   --font-category: 'Open Sans';
-
-
-
 }
 
 * {

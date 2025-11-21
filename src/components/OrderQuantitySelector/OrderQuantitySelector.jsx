@@ -1,5 +1,3 @@
-// src/components/OrderQuantitySelector/OrderQuantitySelector.jsx
-
 import styles from './OrderQuantitySelector.module.css'
 
 const OrderQuantitySelector = ({ cantidad, setCantidad }) => {

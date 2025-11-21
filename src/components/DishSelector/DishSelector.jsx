@@ -1,5 +1,3 @@
-// src/components/DishSelector/DishSelector.jsx
-
 import styles from './DishSelector.module.css'
 
 const DishSelector = ({ categoria, opciones, seleccionActual, onSeleccionar }) => {

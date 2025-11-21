@@ -8,16 +8,15 @@ import MC7 from '../assets/images/MC7.webp';
 import MC8 from '../assets/images/MC8.webp';
 import MC9 from '../assets/images/MC9.webp';
 import MyC from '../assets/images/MyC.png';
-import { useTransition } from '../transition/TransitionContext'; // ← Añadido
+import { useTransition } from '../transition/TransitionContext';
 
 const MoreInfoPage = () => {
-  const { setTargetPath } = useTransition(); // ← Añadido
+  const { setTargetPath } = useTransition();
 
   return (
     <div className={styles.contenedor}>
       <img src={MyC} alt="Logo" className={styles.logo} />
 
-      {/* Botón Atrás */}
       <button className={styles.botonAtras} onClick={() => setTargetPath('/')}>
         ←
       </button>

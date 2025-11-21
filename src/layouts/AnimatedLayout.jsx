@@ -11,15 +11,12 @@ const AnimatedLayout = ({ children }) => {
   useEffect(() => {
     if (!targetPath) return
 
-    // 1) Monta overlay y baja
     setShowOverlay(true)
 
-    // 2) Cuando termine la bajada (600ms), navega
     const navTimer = setTimeout(() => {
       navigate(targetPath)
     }, 600)
 
-    // 3) Cuando termine la subida (600ms más), desmonta overlay y limpia target
     const hideTimer = setTimeout(() => {
       setShowOverlay(false)
       setTargetPath(null)

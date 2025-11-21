@@ -1,16 +1,15 @@
 import styles from '../components/DayMenu/DayMenu.module.css'
 import MyC from '../assets/images/MyC.png';
 import martina from '../assets/images/martina.png';
-import { useTransition } from '../transition/TransitionContext'; // ← Añadido
+import { useTransition } from '../transition/TransitionContext';
 
 const AboutPage = () => {
-  const { setTargetPath } = useTransition(); // ← Añadido
+  const { setTargetPath } = useTransition();
 
   return (
     <div className={styles.contenedor}>
       <img src={MyC} alt="Logo" className={styles.logo} />
 
-      {/* Botón Atrás */}
       <button className={styles.botonAtras} onClick={() => setTargetPath('/')}>
         ←
       </button>

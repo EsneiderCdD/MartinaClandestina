@@ -1,8 +1,6 @@
-// src/transition/TransitionOverlay.jsx
-
 import { AnimatePresence, motion } from 'framer-motion'
 import styles from './TransitionOverlay.module.css'
-import Logo from '../assets/images/Logo.png'   // ← importa tu logo aquí
+import Logo from '../assets/images/Logo.png'
 import { useTransition } from './TransitionContext'
 
 const TransitionOverlay = ({ show }) => {
