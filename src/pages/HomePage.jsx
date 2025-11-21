@@ -24,7 +24,7 @@ const HomePage = () => {
             to={`/menu/${dia}`}
             className={`${styles.enlace} ${index === indiceHoy ? styles.activo : ''}`}
           >
-            Menú de {dia.charAt(0).toUpperCase() + dia.slice(1)}
+            Menú del {dia.charAt(0).toUpperCase() + dia.slice(1)}
           </AnimatedLink>
         ))}
 
